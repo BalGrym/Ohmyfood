@@ -1,4 +1,124 @@
+* {
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  margin: 0px; }
+
+.bold {
+  font-weight: bolder; }
+
 .logo {
-  font-family: 'Shrikhand', cursive;
-  color: yellow;
-  font-size: large; }
+  font-family: 'Shrikhand', cursive; }
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px; }
+
+.logo img {
+  width: 165px; }
+
+/* NAV */
+nav, .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.localisation {
+  width: 100%;
+  background-color: #eaeaea;
+  border-top: 1px solid #cfcfcf;
+  box-shadow: inset 0 5px 9px -7px rgba(0, 0, 0, 0.4); }
+
+.intro {
+  background-color: #f6f6f6;
+  height: 280px; }
+
+.intro h1 {
+  width: 60%;
+  margin: 0px; }
+
+.intro p {
+  width: 80%; }
+
+.explorez {
+  height: 50px;
+  width: 60%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 100px 100px;
+  background: radial-gradient(ellipse at top, #FF79DA, transparent), radial-gradient(ellipse at bottom, #9356DC, transparent);
+  color: white; }
+
+/* MAIN */
+.liste_fonctionnement {
+  margin: 0px 20px 0px 20px; }
+
+.fonctionnement {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  margin: 24px 0px 24px 10px;
+  border-radius: 15px 15px;
+  box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
+  .fonctionnement_number {
+    background: #9356DC;
+    color: white;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 10px; }
+  .fonctionnement_icon {
+    color: #7e7e7e;
+    margin: 0px 25px 0px 5px; }
+  .fonctionnement_text {
+    font-size: 13px; }
+
+/* Section Restaurant */
+.liste_restaurant {
+  background-color: #f6f6f6;
+  padding: 50px 20px 60px 20px; }
+
+.restaurant {
+  margin: 15px 0px 15px 0px;
+  height: auto;
+  background-color: white;
+  border-radius: 15px 15px;
+  /*&_new{
+        position: relative;
+        top: 0px; right: 0px;
+    }*/ }
+  .restaurant_img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px; }
+  .restaurant_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .restaurant_detail p {
+    margin: 10px 0px 10px 15px; }
+  .restaurant_detail_heart {
+    margin-right: 20px; }
+
+/* FOOTER */
+footer {
+  padding: 1px 20px 10px 20px;
+  background: #353535;
+  color: white; }
+
+.info {
+  padding: 0px;
+  list-style-type: none;
+  line-height: 25px; }
