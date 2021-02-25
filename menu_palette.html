@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Ohmyfood!</title>
-        <link rel="stylsheet" href="./public/css/style.css" />
+        <link rel="stylesheet" href="public/css/style.css" />
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap" rel="stylesheet">
@@ -14,99 +14,89 @@
     <body>
         <header>
             <i class="fas fa-arrow-left"></i>
-            <div class="logo">
-                <img src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
-            </div>
+            <img class="logo" src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
         </header>
 
-        <main>
+        <main class="main_menu">
             <section class="">
-                <figure>
-                    <!--<img src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du Restaurant"/>-->
-                    <figcaption>
-                        <p class="bold">La palette du goût</p>
+                <figure class="presentation">
+                    <img class="presentation_img" src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du Restaurant"/>
+                    <figcaption class="presentation_text">
+                        <p class="logo">La palette du goût</p>
                         <i class="far fa-heart"></i>
                     </figcaption>
                 </figure>
             </section>
 
-            <section class="entrées">
-                <h3 class="uppercase">entrées</h3>
-                <ul>
-                    <li class="entrées_detail">
-                        <p class="bold">Fricassé d'escargot</p>
-                        <p>Au piment d'Espelette</p>
+            <section class="repas">
+                <h3 class="repas_uppercase">entrées</h3>
+                    <div class="repas_detail">
+                        <p><span class="bold">Fricassée d'escargot</span></br>Au piment d'espelette</p>
                         <p class="bold euros">25€</p>
-                    </li>
+                    </div>
 
-                    <li class="entrées_detail">
-                        <p class="bold">Foie gras de canard mi-cuit</p>
-                        <p>Et ses copeaux de truffe noire</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Foie gras de canard mi-cuit</span></br>Et ses copeaux de truffe noire</p>
                         <p class="bold euros">35€</p>
-                    </li>
+                    </div>
 
-                    <li class="entrées_detail">
-                        <p class="bold">Oeuf au plat</p>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Oeuf au plat </span></br>Assaisonné à la truffe sur lit de caviar</p>
                         <p class="bold euros">20€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
             
-            <section class="plats">
-                <h3 class="uppercase">plats</h3>
-                <ul>
-                    <li class="plats_detail">
-                        <p class="bold">Filet de boeuf</p>
-                        <p>Accompagné de sa ribambelle de légumes</p>
+            <section class="repas">
+                <div class="borderBottom">
+                    <h3 class="repas_uppercase">plats</h3>
+                </div> 
+                
+                    <div class="repas_detail">
+                        <p><span class="bold">Filet de boeuf aux herbes </span></br>Accompagné de sa ribambelle de légumes</p>
                         <p class="bold euros">40€</p>
-                    </li>
+                    </div>
 
-                    <li class="plats_detail">
-                        <p class="bold">Parmentier de queue de boeuf</p>
-                        <p>À la truffe noire sur sa purée de panais</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Parmentier de queue de boeuf</span></br>À la truffe noire sur sa purée de panais</p>
                         <p class="bold euros">35€</p>
-                    </li>
+                    </div>
 
-                    <li class="plats_detail">
-                        <p class="bold">Filet de turbot</p>
-                        <p>Aux agrumes</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Filet de turbot </span></br>Aux agrumes</p>
                         <p class="bold euros">44€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
 
-            <section class="dessserts">
-                <h3 class="uppercase">desserts</h3>
-                <ul>
-                    <li class="desserts_detail">
-                        <p class="bold">Paris-Brest</p>
-                        <p>Revisité</p>
+            <section class="repas">
+                <h3 class="repas_uppercase">desserts</h3>
+                    <div class="repas_detail">
+                        <p><span class="bold">Paris-Brest</span></br>Revisité</p>
                         <p class="bold euros">18€</p>
-                    </li>
+                    </div>
 
-                    <li class="desserts_detail">
-                        <p class="bold">Macaron au chocolat d'exception</p>
-                        <p>Et glace à la vanille de Madagascar</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Macaron au chocolat d'exception </span></br>Et glace à la vanille de Madagascar</p>
                         <p class="bold euros">22€</p>
-                    </li>
+                    </div>
 
-                    <li class="desserts_detail">
-                        <p class="bold">Mousse au chocolat </p>
-                        <p>Au piment d'Espelette et à la truffe noire</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Mousse au chocolat </span></br>Au piment d'Espelette et à la truffe noire</p>
                         <p class="bold euros">23€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
+            <div class="button_commander">
+                <button class="button bold">Commander</button>
+            </div>
+            
         </main>
 
         <footer>
-            <h2>ohmyfood</h2>
-            <ul>
-                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+            <h2 class="logo">ohmyfood</h2>
+            <ul class="info">
+                <li class="info_more"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li class="info_more"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li class="info_more">Mentions légales</li>
+                <li class="info_more">Contact</li>
             </ul>
         </footer>
     </body>

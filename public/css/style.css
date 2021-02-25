@@ -8,7 +8,8 @@ body {
   font-weight: bolder; }
 
 .logo {
-  font-family: 'Shrikhand', cursive; }
+  font-family: 'Shrikhand', cursive;
+  width: 165px; }
 
 /* HEADER */
 header {
@@ -16,9 +17,6 @@ header {
   justify-content: center;
   align-items: center;
   height: 63px; }
-
-.logo img {
-  width: 165px; }
 
 /* NAV */
 nav, .intro {
@@ -45,14 +43,15 @@ nav, .intro {
 .intro p {
   width: 80%; }
 
-.explorez {
+.button {
   height: 50px;
   width: 60%;
   margin-top: 20px;
   border: none;
   border-radius: 100px 100px;
   background: radial-gradient(ellipse at top, #FF79DA, transparent), radial-gradient(ellipse at bottom, #9356DC, transparent);
-  color: white; }
+  color: white;
+  box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
 
 /* MAIN */
 .liste_fonctionnement {
@@ -122,3 +121,76 @@ footer {
   padding: 0px;
   list-style-type: none;
   line-height: 25px; }
+
+/*  --- MENU ---*/
+/* Header */
+/*  
+.fa-arrow-left{
+    align-self: ;
+} */
+/* MAIN */
+.main_menu {
+  background-color: #f6f6f6;
+  padding-bottom: 20px; }
+
+.presentation {
+  margin: 0px;
+  height: auto;
+  background-color: white;
+  border-radius: 15px 15px;
+  position: relative; }
+  .presentation_img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; }
+  .presentation_text {
+    border-radius: 30px 30px 0px 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #f6f6f6;
+    height: 50px; }
+    .presentation_text p {
+      margin: 0px;
+      width: auto;
+      font-size: 23px; }
+
+.repas {
+  background-color: #f6f6f6; }
+  .repas_uppercase {
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-left: 20px;
+    position: relative; }
+    .repas_uppercase:after {
+      content: "";
+      /* This is necessary for the pseudo element to work. */
+      display: block;
+      /* This will put the pseudo element on its own line. */
+      width: 10%;
+      /* Change this to whatever width you want. */
+      border-bottom: 2px solid #99E2D0;
+      /* This creates the border. Replace black with whatever color you want. */ }
+  .repas_detail {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    border-radius: 15px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px 10px 15px 10px;
+    box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
+    .repas_detail p {
+      margin: 0px;
+      align-self: flex-end;
+      font-size: 13px; }
+
+.button_commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; }

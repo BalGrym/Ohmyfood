@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Ohmyfood!</title>
-        <link rel="stylsheet" href="./public/css/style.css" />
+        <link rel="stylesheet" href="public/css/style.css" />
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap" rel="stylesheet">
@@ -14,99 +14,89 @@
     <body>
         <header>
             <i class="fas fa-arrow-left"></i>
-            <div class="logo">
-                <img src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
-            </div>
+            <img class="logo" src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
         </header>
 
-        <main>
+        <main class="main_menu">
             <section class="">
-                <figure>
-                    <!--<img src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du Restaurant"/>-->
-                    <figcaption>
-                        <p class="bold">Le délice des sens</p>
+                <figure class="presentation">
+                    <img class="presentation_img" src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du Restaurant"/>
+                    <figcaption class="presentation_text">
+                        <p class="logo">Le délice des sens</p>
                         <i class="far fa-heart"></i>
                     </figcaption>
                 </figure>
             </section>
 
-            <section class="entrées">
-                <h3 class="uppercase">entrées</h3>
-                <ul>
-                    <li class="entrées_detail">
-                        <p class="bold">Tartare de thon</p>
-                        <p>Assaisonné au yuzu</p>
+            <section class="repas">
+                <h3 class="repas_uppercase">entrées</h3>
+                    <div class="repas_detail">
+                        <p><span class="bold">Tartare de thon</span></br>Assaisonné au yuzu</p>
                         <p class="bold euros">25€</p>
-                    </li>
+                    </div>
 
-                    <li class="entrées_detail">
-                        <p class="bold">Bouchée de homard croustillant </p>
-                        <p>Et sa farandole de petits légumes</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Bouchée de homard croustillant</span></br>Et sa farandole de petits légumes</p>
                         <p class="bold euros">35€</p>
-                    </li>
+                    </div>
 
-                    <li class="entrées_detail">
-                        <p class="bold">Velouté de cèpes </p>
-                        <p>Aux truffes</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Velouté de cèpes </span></br>Aux truffes</p>
                         <p class="bold euros">20€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
             
-            <section class="plats">
-                <h3 class="uppercase">plats</h3>
-                <ul>
-                    <li class="plats_detail">
-                        <p class="bold">Poulet rôti aux herbes de Provence </p>
-                        <p>Et sa crème de truffe</p>
+            <section class="repas">
+                <div class="borderBottom">
+                    <h3 class="repas_uppercase">plats</h3>
+                </div> 
+                
+                    <div class="repas_detail">
+                        <p><span class="bold">Poulet rôti aux herbes de Provence </span></br>Et sa crème de truffe</p>
                         <p class="bold euros">40€</p>
-                    </li>
+                    </div>
 
-                    <li class="plats_detail">
-                        <p class="bold">Langouste rôtie </p>
-                        <p>Et ses légumes de saison</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Langouste rôtie</span></br>Et ses légumes de saison</p>
                         <p class="bold euros">35€</p>
-                    </li>
+                    </div>
 
-                    <li class="plats_detail">
-                        <p class="bold">Côte de boeuf Angus </p>
-                        <p>Et sa purée de panaisumes</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Côte de boeuf Angus </span></br>Et sa purée de panaisumes</p>
                         <p class="bold euros">44€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
 
-            <section class="dessserts">
-                <h3 class="uppercase">desserts</h3>
-                <ul>
-                    <li class="desserts_detail">
-                        <p class="bold">Farandole de desserts</p>
-                        <p>Du chef</p>
+            <section class="repas">
+                <h3 class="repas_uppercase">desserts</h3>
+                    <div class="repas_detail">
+                        <p><span class="bold">Farandole de desserts</span></br>Du chef</p>
                         <p class="bold euros">18€</p>
-                    </li>
+                    </div>
 
-                    <li class="desserts_detail">
-                        <p class="bold">Crème brulée </p>
-                        <p>Revisitée</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Crème brulée</span></br>Revisitée</p>
                         <p class="bold euros">22€</p>
-                    </li>
+                    </div>
 
-                    <li class="desserts_detail">
-                        <p class="bold">Tiramisu </p>
-                        <p>À la noisette</p>
+                    <div class="repas_detail">
+                        <p><span class="bold">Tiramisu</span></br>À la noisette</p>
                         <p class="bold euros">23€</p>
-                    </li>
-                </ul>
+                    </div>
             </section>
+            <div class="button_commander">
+                <button class="button bold">Commander</button>
+            </div>
+            
         </main>
 
         <footer>
-            <h2>ohmyfood</h2>
-            <ul>
-                <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+            <h2 class="logo">ohmyfood</h2>
+            <ul class="info">
+                <li class="info_more"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li class="info_more"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li class="info_more">Mentions légales</li>
+                <li class="info_more">Contact</li>
             </ul>
         </footer>
     </body>

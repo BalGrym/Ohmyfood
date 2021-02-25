@@ -14,6 +14,7 @@ body{
 
 .logo{
     font-family: 'Shrikhand', cursive;
+    width: 165px;
 }
 
 /* HEADER */
@@ -24,11 +25,6 @@ header{
     align-items: center;
     height: 63px;
 }
-
-.logo img{
-    width: 165px;
-}
-
 
 /* NAV */
 
@@ -61,7 +57,7 @@ nav, .intro{
     width: 80%;
 }
 
-.explorez{
+.button{
     height: 50px;
     width: 60%;
     margin-top: 20px;
@@ -70,6 +66,7 @@ nav, .intro{
     background:  radial-gradient(ellipse at top, $color-secondary, transparent),
                 radial-gradient(ellipse at bottom, $color-primary, transparent);
     color: white;
+    box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
 }
 
 /* MAIN */
@@ -156,3 +153,84 @@ footer{
     list-style-type: none;
     line-height: 25px;
 }
+
+
+/*  --- MENU ---*/ 
+
+/* Header */ 
+/*  
+.fa-arrow-left{
+    align-self: ;
+} */
+
+/* MAIN */ 
+.main_menu{
+    background-color: $color-background;
+    padding-bottom: 20px;
+}
+.presentation{
+    margin:0px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px 15px;
+    position: relative;
+    &_img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+    &_text{
+        border-radius: 30px 30px 0px 0px;
+        position: absolute;
+        left:0; right:0; bottom: 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        background-color: $color-background;
+        height: 50px;
+            p{
+                margin: 0px;
+                width: auto;
+                font-size: 23px;
+            }
+    }
+}
+
+.repas{
+    background-color: $color-background;
+    &_uppercase{
+        text-transform: uppercase;
+        font-weight: lighter;
+        margin-left: 20px;
+        position: relative;
+        &:after{
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            width: 10%; /* Change this to whatever width you want. */
+            border-bottom: 2px solid $color-tertiary; /* This creates the border. Replace black with whatever color you want. */
+        }
+    }
+    &_detail{
+        display: flex;
+        justify-content: space-between;
+        align-self: flex-end;
+        border-radius: 15px;
+        background-color: white;
+        margin: 15px;
+        padding: 15px 10px 15px 10px;
+        box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
+        p{
+            margin:0px;
+            align-self: flex-end;
+            font-size: 13px;
+        }
+    }
+}
+
+.button_commander{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
