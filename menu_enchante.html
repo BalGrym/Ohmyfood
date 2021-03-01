@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-            <i class="fas fa-arrow-left"></i>
+            <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
             <img class="logo" src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
         </header>
 
@@ -30,6 +30,7 @@
 
             <section class="repas">
                 <h3 class="repas_uppercase">entrées</h3>
+                <div class="repas_container">
                     <div class="repas_detail">
                         <p><span class="bold">Ravioles de foie gras</span></br>Accompagnés de leur crème à la truffe</p>
                         <p class="bold euros">25€</p>
@@ -49,31 +50,32 @@
                         <p><span class="bold">Foie gras de canard cuit entier </span></br>Confiture de figue et pain toasté</p>
                         <p class="bold euros">35€</p>
                     </div>
+                </div>
             </section>
             
             <section class="repas">
-                <div class="borderBottom">
                     <h3 class="repas_uppercase">plats</h3>
-                </div> 
-                
-                    <div class="repas_detail">
-                        <p><span class="bold">Noix de coquilles Saint-Jacques </span></br>Sur lit de purée de céleri-rave</p>
-                        <p class="bold euros">40€</p>
-                    </div>
+                    <div class="repas_container">
+                        <div class="repas_detail">
+                            <p><span class="bold">Noix de coquilles Saint-Jacques </span></br>Sur lit de purée de céleri-rave</p>
+                            <p class="bold euros">40€</p>
+                        </div>
 
-                    <div class="repas_detail">
-                        <p><span class="bold">Langoustine poêlée</span></br>Purée de patate douce</p>
-                        <p class="bold euros">35€</p>
-                    </div>
+                        <div class="repas_detail">
+                            <p><span class="bold">Langoustine poêlée</span></br>Purée de patate douce</p>
+                            <p class="bold euros">35€</p>
+                        </div>
 
-                    <div class="repas_detail">
-                        <p><span class="bold">Mijoté de queue de boeuf  </span></br>Et riz sauvage aux zestes de citron</p>
-                        <p class="bold euros">44€</p>
+                        <div class="repas_detail">
+                            <p><span class="bold">Mijoté de queue de boeuf  </span></br>Et riz sauvage aux zestes de citron</p>
+                            <p class="bold euros">44€</p>
+                        </div>
                     </div>
             </section>
 
             <section class="repas">
                 <h3 class="repas_uppercase">desserts</h3>
+                <div class="repas_container">
                     <div class="repas_detail">
                         <p><span class="bold">Macaron noisette et chocolat</span></br>Glace au caramel brun et sel de Guérande</p>
                         <p class="bold euros">18€</p>
@@ -88,6 +90,7 @@
                         <p><span class="bold">Tarte au citron meringuée  </span></br>Déstructurée</p>
                         <p class="bold euros">23€</p>
                     </div>
+                </div>
             </section>
             <div class="button_commander">
                 <button class="button bold">Commander</button>
@@ -101,7 +104,7 @@
                 <li class="info_more"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                 <li class="info_more"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li class="info_more">Mentions légales</li>
-                <li class="info_more">Contact</li>
+                <li class="info_more"><a class="info_more" href="mailto:#@#.#">Contact</a></li>
             </ul>
         </footer>
     </body>

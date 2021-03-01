@@ -11,6 +11,10 @@ body {
   font-family: 'Shrikhand', cursive;
   width: 165px; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 /* HEADER */
 header {
   display: flex;
@@ -34,7 +38,8 @@ nav, .intro {
 
 .intro {
   background-color: #f6f6f6;
-  height: 280px; }
+  height: 280px;
+  width: 100%; }
 
 .intro h1 {
   width: 60%;
@@ -45,13 +50,16 @@ nav, .intro {
 
 .button {
   height: 50px;
-  width: 60%;
+  width: 200px;
   margin-top: 20px;
   border: none;
   border-radius: 100px 100px;
-  background: radial-gradient(ellipse at top, #FF79DA, transparent), radial-gradient(ellipse at bottom, #9356DC, transparent);
+  /*background:  radial-gradient(ellipse at top, $color-secondary, transparent),
+                radial-gradient(ellipse at bottom, $color-primary, transparent);*/
+  background: #ff79da;
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   color: white;
-  box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
+  box-shadow: 3px 3px 20px #c5c5c5, -1px 1px 20px #c5c5c5; }
 
 /* MAIN */
 .liste_fonctionnement {
@@ -84,19 +92,18 @@ nav, .intro {
     font-size: 13px; }
 
 /* Section Restaurant */
-.liste_restaurant {
-  background-color: #f6f6f6;
-  padding: 50px 20px 60px 20px; }
-
 .restaurant {
-  margin: 15px 0px 15px 0px;
-  height: auto;
-  background-color: white;
-  border-radius: 15px 15px;
+  background-color: #f6f6f6;
+  padding: 50px 20px 60px 20px;
   /*&_new{
         position: relative;
         top: 0px; right: 0px;
     }*/ }
+  .restaurant_figure {
+    margin: 15px 0px 15px 0px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px 15px; }
   .restaurant_img {
     width: 100%;
     height: 175px;
@@ -121,6 +128,8 @@ footer {
   padding: 0px;
   list-style-type: none;
   line-height: 25px; }
+  .info_more a {
+    color: white; }
 
 /*  --- MENU ---*/
 /* Header */
@@ -151,7 +160,7 @@ footer {
     bottom: 0px;
     display: flex;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-end;
     background-color: #f6f6f6;
     height: 50px; }
     .presentation_text p {
@@ -159,19 +168,26 @@ footer {
       width: auto;
       font-size: 23px; }
 
+.fa-heart {
+  position: relative;
+  bottom: 10px; }
+
+.fa-heart:active {
+  color: pink; }
+
 .repas {
   background-color: #f6f6f6; }
   .repas_uppercase {
     text-transform: uppercase;
     font-weight: lighter;
     margin-left: 20px;
-    position: relative; }
+    width: 100px; }
     .repas_uppercase:after {
       content: "";
       /* This is necessary for the pseudo element to work. */
       display: block;
       /* This will put the pseudo element on its own line. */
-      width: 10%;
+      width: 45%;
       /* Change this to whatever width you want. */
       border-bottom: 2px solid #99E2D0;
       /* This creates the border. Replace black with whatever color you want. */ }
@@ -194,3 +210,56 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px; }
+
+/* MEADI QUERRIES */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .liste_fonctionnement, .container_fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0px; }
+  .fonctionnement {
+    width: 50%; }
+  .restaurant_container {
+    display: flex;
+    flex-wrap: wrap; }
+  .restaurant_figure {
+    width: 47%;
+    margin: 0px 10px 20px 10px; } }
+
+@media only screen and (min-device-width: 1025px) {
+  body {
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .container_fonctionnement, .liste_fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px; }
+  .container_fonctionnement {
+    width: 100%; }
+  .fonctionnement {
+    width: 50%; }
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .restaurant_container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+    .restaurant_figure {
+      width: 23%; }
+  .repas_uppercase {
+    margin: auto;
+    margin-left: 25%; }
+  .repas_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .repas_detail {
+    width: 50%; } }

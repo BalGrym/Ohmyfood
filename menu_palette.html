@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-            <i class="fas fa-arrow-left"></i>
+            <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
             <img class="logo" src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
         </header>
 
@@ -30,6 +30,7 @@
 
             <section class="repas">
                 <h3 class="repas_uppercase">entrées</h3>
+                <div class="repas_container">
                     <div class="repas_detail">
                         <p><span class="bold">Fricassée d'escargot</span></br>Au piment d'espelette</p>
                         <p class="bold euros">25€</p>
@@ -44,31 +45,32 @@
                         <p><span class="bold">Oeuf au plat </span></br>Assaisonné à la truffe sur lit de caviar</p>
                         <p class="bold euros">20€</p>
                     </div>
+                </div>
             </section>
             
             <section class="repas">
-                <div class="borderBottom">
                     <h3 class="repas_uppercase">plats</h3>
-                </div> 
-                
-                    <div class="repas_detail">
-                        <p><span class="bold">Filet de boeuf aux herbes </span></br>Accompagné de sa ribambelle de légumes</p>
-                        <p class="bold euros">40€</p>
-                    </div>
+                    <div class="repas_container">
+                        <div class="repas_detail">
+                            <p><span class="bold">Filet de boeuf aux herbes </span></br>Accompagné de sa ribambelle de légumes</p>
+                            <p class="bold euros">40€</p>
+                        </div>
 
-                    <div class="repas_detail">
-                        <p><span class="bold">Parmentier de queue de boeuf</span></br>À la truffe noire sur sa purée de panais</p>
-                        <p class="bold euros">35€</p>
-                    </div>
+                        <div class="repas_detail">
+                            <p><span class="bold">Parmentier de queue de boeuf</span></br>À la truffe noire sur sa purée de panais</p>
+                            <p class="bold euros">35€</p>
+                        </div>
 
-                    <div class="repas_detail">
-                        <p><span class="bold">Filet de turbot </span></br>Aux agrumes</p>
-                        <p class="bold euros">44€</p>
+                        <div class="repas_detail">
+                            <p><span class="bold">Filet de turbot </span></br>Aux agrumes</p>
+                            <p class="bold euros">44€</p>
+                        </div>
                     </div>
             </section>
 
             <section class="repas">
                 <h3 class="repas_uppercase">desserts</h3>
+                <div class="repas_container">
                     <div class="repas_detail">
                         <p><span class="bold">Paris-Brest</span></br>Revisité</p>
                         <p class="bold euros">18€</p>
@@ -83,6 +85,7 @@
                         <p><span class="bold">Mousse au chocolat </span></br>Au piment d'Espelette et à la truffe noire</p>
                         <p class="bold euros">23€</p>
                     </div>
+                </div>
             </section>
             <div class="button_commander">
                 <button class="button bold">Commander</button>
@@ -96,7 +99,7 @@
                 <li class="info_more"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
                 <li class="info_more"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li class="info_more">Mentions légales</li>
-                <li class="info_more">Contact</li>
+                <li class="info_more"><a class="info_more" href="mailto:#@#.#">Contact</a></li>
             </ul>
         </footer>
     </body>
