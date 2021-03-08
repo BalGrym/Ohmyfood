@@ -12,9 +12,10 @@ body{
     font-weight: bolder;
 }
 
-.logo{
-    font-family: 'Shrikhand', cursive;
+.logo_header{
     width: 165px;
+    display: block;
+    margin: auto;
 }
 
 a{
@@ -48,6 +49,10 @@ nav, .intro{
     box-shadow: inset 0 5px 9px -7px rgba(0,0,0,0.4);
 }
 
+.fa-map-marker-alt{
+    margin-right: 10px;
+}
+
 .intro{
     background-color: $color-background;
     height: 280px;
@@ -70,13 +75,18 @@ nav, .intro{
     margin-top: 20px;
     border: none;
     border-radius: 100px 100px;
-    /*background:  radial-gradient(ellipse at top, $color-secondary, transparent),
-                radial-gradient(ellipse at bottom, $color-primary, transparent);*/
-                background: rgb(255,121,218);
-                background: linear-gradient(174deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%); 
+    background: linear-gradient(174deg, $color-secondary 0%, $color-primary 100%); 
     color: white;
-    box-shadow: 3px 3px 20px $color-shadow-darker, -1px 1px 20px $color-shadow-darker;
+    box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
+    transition: 0.5s;
+    &:hover{
+        background: linear-gradient(174deg, lighten($color-secondary, 5) 0%, lighten($color-primary, 5) 100%); 
+        box-shadow: 5px 5px 20px $color-shadow-darker, -3px 3px 20px $color-shadow-darker;
+        transform: scale(1.05);
+    }
 }
+
+
 
 /* MAIN */
 
@@ -92,6 +102,9 @@ nav, .intro{
     margin: 24px 0px 24px 10px;
     border-radius: 15px 15px;
     box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
+    &_special{
+        background-color: #f5edff;
+    }
     &_number{
         background: $color-primary;
         color: white;
@@ -105,14 +118,24 @@ nav, .intro{
         position: relative;
         right: 10px;
     }
-    &_icon{
+    &_icon_shop{
+        color: $color-primary;
+        margin: 0px 20px 0px 5px;
+    }
+    &_icon_list{
         color: $color-icon;
-        margin: 0px 25px 0px 5px;
+        margin: 0px 23px 0px 5px;
+    }
+    &_icon_tel{
+        color: $color-icon;
+        margin: 0px 28px 0px 5px;
     }
     &_text{
         font-size: 13px;
     }
 }
+
+
 
 /* Section Restaurant */
 
@@ -124,6 +147,7 @@ nav, .intro{
         height: auto;
         background-color: white;
         border-radius: 15px 15px;
+        position: relative;
     }
     &_img{
         width: 100%;
@@ -131,10 +155,20 @@ nav, .intro{
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
     }
-    /*&_new{
-        position: relative;
-        top: 0px; right: 0px;
-    }*/
+    &_new{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 15px; right: 15px;
+        background-color:$color-tertiary ;
+        width: 80px;
+        height: 30px;
+        border-radius: 3px;
+        &_text{
+            color: #008766;
+        }
+    }
     &_detail{
         display: flex;
         align-items: center;
@@ -143,10 +177,61 @@ nav, .intro{
     &_detail p{
         margin: 10px 0px 10px 15px;
     }
-    &_detail_heart{
-       margin-right: 20px;
-    }
 }
+
+.like-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 2;
+  }
+.fa-heart {
+    position: absolute;
+    transition: all ease-in-out;
+    width: 20px;
+    right:20px;
+  }
+
+.fa-heart path{
+    fill: transparent;
+    stroke-width: 30;
+    stroke: black;
+}
+
+.like-btn:checked + .fa-heart path{
+    animation: animate-heart .5s linear forwards; 
+    -webkit-text-stroke: url(#my-cool-gradient);
+    transform-origin: center;
+  }
+@keyframes animate-heart{
+    0%,25%{
+        opacity: .25;
+      transform: scale(1);
+    }
+    30%{
+        opacity: .5;
+        transform: scale(0.8);
+    }
+    75%{
+        opacity: .75;
+      transform: scale(1.2);
+    }
+    100% {
+       fill: url(#my-cool-gradient);
+      stroke: url(#my-cool-gradient) ;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
 
 /* FOOTER */ 
 
@@ -155,6 +240,9 @@ footer{
     background: $color-footer;
     color: white;
 } 
+.logo{
+    font-family: 'Shrikhand', cursive;
+}
 
 .info{
     padding: 0px;
@@ -163,16 +251,23 @@ footer{
     &_more a {
         color: white;
     }
+    &_fourchette{
+        margin-right: 10px;
+    }
+    &_main{
+        margin-right: 10px;
+        font-size: 10px;
+    }
 }
 
 
 /*  --- MENU ---*/ 
 
 /* Header */ 
-/*  
+
 .fa-arrow-left{
-    align-self: ;
-} */
+    margin-left: 20px;
+}
 
 /* MAIN */ 
 .main_menu{
@@ -207,17 +302,10 @@ footer{
     }
 }
 
-.fa-heart{
-    position: relative;
-    bottom: 10px;
-}
-
-.fa-heart:active{
-    color: pink;
-}
 
 .repas{
     background-color: $color-background;
+    
     &_uppercase{
         text-transform: uppercase;
         font-weight: lighter;
@@ -233,20 +321,66 @@ footer{
     &_detail{
         display: flex;
         justify-content: space-between;
-        align-self: flex-end;
+        align-items: center;
         border-radius: 15px;
         background-color: white;
         margin: 15px;
-        padding: 15px 10px 15px 10px;
+        overflow-x: hidden;
+        animation: repas-detail 1s;
+       /* padding: 15px 10px 15px 10px; */
         box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
-        p{
-            margin:0px;
+         &:hover{
+            & > .repas_check{
+                transform: translate(0%);
+                & > .repas_check_icon{
+                    transform: rotate(0turn);
+                }
+            }
+        } 
+
+        & p{
+            margin:15px 10px 15px 10px;
             align-self: flex-end;
             font-size: 13px;
         }
     }
+    &_text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &_check{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 70px;
+        background-color: $color-tertiary;
+        border-radius: 0px 15px 15px 0px;
+        transform: translate(100%);
+        transition: transform 0.5s;
+        transform-origin: right;
+        &_icon{
+            color: white;
+            background-color: $color-tertiary;
+            transform: rotate(-1turn);
+            transition: transform 0.5s ease-in-out;
+        }
+    }
 }
 
+@keyframes repas-detail {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 .button_commander{
     display: flex;

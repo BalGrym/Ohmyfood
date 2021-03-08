@@ -7,9 +7,10 @@ body {
 .bold {
   font-weight: bolder; }
 
-.logo {
-  font-family: 'Shrikhand', cursive;
-  width: 165px; }
+.logo_header {
+  width: 165px;
+  display: block;
+  margin: auto; }
 
 a {
   text-decoration: none;
@@ -36,6 +37,9 @@ nav, .intro {
   border-top: 1px solid #cfcfcf;
   box-shadow: inset 0 5px 9px -7px rgba(0, 0, 0, 0.4); }
 
+.fa-map-marker-alt {
+  margin-right: 10px; }
+
 .intro {
   background-color: #f6f6f6;
   height: 280px;
@@ -54,12 +58,14 @@ nav, .intro {
   margin-top: 20px;
   border: none;
   border-radius: 100px 100px;
-  /*background:  radial-gradient(ellipse at top, $color-secondary, transparent),
-                radial-gradient(ellipse at bottom, $color-primary, transparent);*/
-  background: #ff79da;
-  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
   color: white;
-  box-shadow: 3px 3px 20px #c5c5c5, -1px 1px 20px #c5c5c5; }
+  box-shadow: 3px 3px 20px #d1d1d1, -1px 1px 20px #d1d1d1;
+  transition: 0.5s; }
+  .button:hover {
+    background: linear-gradient(174deg, #ff93e1 0%, #a16be0 100%);
+    box-shadow: 5px 5px 20px #8f8f8f, -3px 3px 20px #8f8f8f;
+    transform: scale(1.05); }
 
 /* MAIN */
 .liste_fonctionnement {
@@ -72,7 +78,9 @@ nav, .intro {
   background: #f6f6f6;
   margin: 24px 0px 24px 10px;
   border-radius: 15px 15px;
-  box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
+  box-shadow: 3px 3px 20px #d1d1d1, -1px 1px 20px #d1d1d1; }
+  .fonctionnement_special {
+    background-color: #f5edff; }
   .fonctionnement_number {
     background: #9356DC;
     color: white;
@@ -85,38 +93,97 @@ nav, .intro {
     align-items: center;
     position: relative;
     right: 10px; }
-  .fonctionnement_icon {
+  .fonctionnement_icon_shop {
+    color: #9356DC;
+    margin: 0px 20px 0px 5px; }
+  .fonctionnement_icon_list {
     color: #7e7e7e;
-    margin: 0px 25px 0px 5px; }
+    margin: 0px 23px 0px 5px; }
+  .fonctionnement_icon_tel {
+    color: #7e7e7e;
+    margin: 0px 28px 0px 5px; }
   .fonctionnement_text {
     font-size: 13px; }
 
 /* Section Restaurant */
 .restaurant {
   background-color: #f6f6f6;
-  padding: 50px 20px 60px 20px;
-  /*&_new{
-        position: relative;
-        top: 0px; right: 0px;
-    }*/ }
+  padding: 50px 20px 60px 20px; }
   .restaurant_figure {
     margin: 15px 0px 15px 0px;
     height: auto;
     background-color: white;
-    border-radius: 15px 15px; }
+    border-radius: 15px 15px;
+    position: relative; }
   .restaurant_img {
     width: 100%;
     height: 175px;
     object-fit: cover;
     border-radius: 15px 15px 0px 0px; }
+  .restaurant_new {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 15px;
+    background-color: #99E2D0;
+    width: 80px;
+    height: 30px;
+    border-radius: 3px; }
+    .restaurant_new_text {
+      color: #008766; }
   .restaurant_detail {
     display: flex;
     align-items: center;
     justify-content: space-between; }
   .restaurant_detail p {
     margin: 10px 0px 10px 15px; }
-  .restaurant_detail_heart {
-    margin-right: 20px; }
+
+.like-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 2; }
+
+.fa-heart {
+  position: absolute;
+  transition: all ease-in-out;
+  width: 20px;
+  right: 20px; }
+
+.fa-heart path {
+  fill: transparent;
+  stroke-width: 30;
+  stroke: black; }
+
+.like-btn:checked + .fa-heart path {
+  animation: animate-heart .5s linear forwards;
+  -webkit-text-stroke: url(#my-cool-gradient);
+  transform-origin: center; }
+
+@keyframes animate-heart {
+  0%, 25% {
+    opacity: .25;
+    transform: scale(1); }
+  30% {
+    opacity: .5;
+    transform: scale(0.8); }
+  75% {
+    opacity: .75;
+    transform: scale(1.2); }
+  100% {
+    fill: url(#my-cool-gradient);
+    stroke: url(#my-cool-gradient);
+    opacity: 1;
+    transform: scale(1); } }
 
 /* FOOTER */
 footer {
@@ -124,19 +191,26 @@ footer {
   background: #353535;
   color: white; }
 
+.logo {
+  font-family: 'Shrikhand', cursive; }
+
 .info {
   padding: 0px;
   list-style-type: none;
   line-height: 25px; }
   .info_more a {
     color: white; }
+  .info_fourchette {
+    margin-right: 10px; }
+  .info_main {
+    margin-right: 10px;
+    font-size: 10px; }
 
 /*  --- MENU ---*/
 /* Header */
-/*  
-.fa-arrow-left{
-    align-self: ;
-} */
+.fa-arrow-left {
+  margin-left: 20px; }
+
 /* MAIN */
 .main_menu {
   background-color: #f6f6f6;
@@ -168,13 +242,6 @@ footer {
       width: auto;
       font-size: 23px; }
 
-.fa-heart {
-  position: relative;
-  bottom: 10px; }
-
-.fa-heart:active {
-  color: pink; }
-
 .repas {
   background-color: #f6f6f6; }
   .repas_uppercase {
@@ -194,16 +261,51 @@ footer {
   .repas_detail {
     display: flex;
     justify-content: space-between;
-    align-self: flex-end;
+    align-items: center;
     border-radius: 15px;
     background-color: white;
     margin: 15px;
-    padding: 15px 10px 15px 10px;
-    box-shadow: 3px 3px 20px #ebebeb, -1px 1px 20px #ebebeb; }
+    overflow-x: hidden;
+    animation: repas-detail 1s;
+    /* padding: 15px 10px 15px 10px; */
+    box-shadow: 3px 3px 20px #d1d1d1, -1px 1px 20px #d1d1d1; }
+    .repas_detail:hover > .repas_check {
+      transform: translate(0%); }
+      .repas_detail:hover > .repas_check > .repas_check_icon {
+        transform: rotate(0turn); }
     .repas_detail p {
-      margin: 0px;
+      margin: 15px 10px 15px 10px;
       align-self: flex-end;
       font-size: 13px; }
+  .repas_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+  .repas_check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 70px;
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    transform: translate(100%);
+    transition: transform 0.5s;
+    transform-origin: right; }
+    .repas_check_icon {
+      color: white;
+      background-color: #99E2D0;
+      transform: rotate(-1turn);
+      transition: transform 0.5s ease-in-out; }
+
+@keyframes repas-detail {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 .button_commander {
   display: flex;
