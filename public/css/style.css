@@ -16,6 +16,48 @@ a {
   text-decoration: none;
   color: black; }
 
+/*animation loading */
+.loading {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  animation: loading-stop 3s step-end both; }
+  .loading_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: loading-spinner 0.5s cubic-bezier(0.2, 0.6, 0.5, 1) 6 alternate;
+    transform-origin: top; }
+    .loading_circle_1 {
+      background-color: #9356DC;
+      animation-delay: 0.1s; }
+    .loading_circle_2 {
+      background-color: #FF79DA;
+      animation-delay: 0.2s; }
+    .loading_circle_3 {
+      background-color: #99E2D0;
+      animation-delay: 0.3s; }
+
+@keyframes loading-spinner {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-80px); } }
+
+@keyframes loading-stop {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0); } }
+
 /* HEADER */
 header {
   display: flex;
@@ -156,8 +198,8 @@ nav, .intro {
 .fa-heart {
   position: absolute;
   transition: all ease-in-out;
-  width: 20px;
-  right: 20px; }
+  width: 30px;
+  right: 10px; }
 
 .fa-heart path {
   fill: transparent;
@@ -168,6 +210,11 @@ nav, .intro {
   animation: animate-heart .5s linear forwards;
   -webkit-text-stroke: url(#my-cool-gradient);
   transform-origin: center; }
+
+.gradient {
+  width: 0;
+  height: 0;
+  position: absolute; }
 
 @keyframes animate-heart {
   0%, 25% {
@@ -266,11 +313,31 @@ footer {
     background-color: white;
     margin: 15px;
     overflow-x: hidden;
-    animation: repas-detail 1s;
-    /* padding: 15px 10px 15px 10px; */
+    opacity: 0;
+    animation: repas-detail 1s both;
     box-shadow: 3px 3px 20px #d1d1d1, -1px 1px 20px #d1d1d1; }
+    .repas_detail--1 {
+      animation-delay: 100ms; }
+    .repas_detail--2 {
+      animation-delay: 200ms; }
+    .repas_detail--3 {
+      animation-delay: 300ms; }
+    .repas_detail--4 {
+      animation-delay: 400ms; }
+    .repas_detail--5 {
+      animation-delay: 500ms; }
+    .repas_detail--6 {
+      animation-delay: 600ms; }
+    .repas_detail--7 {
+      animation-delay: 700ms; }
+    .repas_detail--8 {
+      animation-delay: 800ms; }
+    .repas_detail--9 {
+      animation-delay: 900ms; }
+    .repas_detail--10 {
+      animation-delay: 1000ms; }
     .repas_detail:hover > .repas_check {
-      transform: translate(0%); }
+      display: flex; }
       .repas_detail:hover > .repas_check > .repas_check_icon {
         transform: rotate(0turn); }
     .repas_detail p {
@@ -282,30 +349,55 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%; }
+    .repas_text:hover {
+      width: 80%;
+      transition: 1s;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
+    .repas_text_name {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
   .repas_check {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 60px;
-    width: 70px;
+    width: 20%;
     background-color: #99E2D0;
     border-radius: 0px 15px 15px 0px;
-    transform: translate(100%);
-    transition: transform 0.5s;
-    transform-origin: right; }
+    display: none;
+    animation: slider-check 0.5s both; }
     .repas_check_icon {
       color: white;
       background-color: #99E2D0;
-      transform: rotate(-1turn);
-      transition: transform 0.5s ease-in-out; }
+      animation: slider-rotate 0.5s; }
+
+@keyframes slider-check {
+  from {
+    width: 0%;
+    display: flex; }
+  to {
+    width: 20%; } }
+
+@keyframes slider-rotate {
+  from {
+    transform: rotate(0turn);
+    animation-delay: 0.5s; }
+  to {
+    transform: rotate(1turn);
+    animation-delay: 0.5s; } }
 
 @keyframes repas-detail {
   0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
+    position: relative;
+    opacity: 0;
+    top: 25px; }
   100% {
-    opacity: 1; } }
+    position: relative;
+    opacity: 1;
+    top: 0px; } }
 
 .button_commander {
   display: flex;

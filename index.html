@@ -12,6 +12,11 @@
         <script src="https://kit.fontawesome.com/6525312ad7.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div class="loading">
+            <div class="loading_circle loading_circle_1"></div>
+            <div class="loading_circle loading_circle_2"></div>
+            <div class="loading_circle loading_circle_3"></div>
+        </div>
         <header>
             <!--<div class="logo">-->
                 <img class="logo_header" src="public/img/logo/ohmyfood@2x.svg" alt="Logo du site" />
@@ -101,7 +106,9 @@
                                 
                               <!-- <i class="far fa-heart restaurant_detail_heart"></i> -->
                                 <input type="checkbox" class="like-btn">
-                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16 restaurant_detail_heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 560 512">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" 
+                                         class="svg-inline--fa fa-heart fa-w-16 restaurant_detail_heart" role="img"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 800 700">
                                         <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
                                             <a xlink:href="#0">
                                                 <circle cx="60" cy="25" r="5" data-Name="shape 3" data-tabindex="0" />
@@ -114,7 +121,7 @@
                     </figure>
                 </div>
             </section>
-            <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+            <svg class="gradient"  aria-hidden="true" focusable="false">
                 <linearGradient id="my-cool-gradient" x2="1" y2="1">
                   <stop offset="0%" stop-color="#9356DC" />
                   <stop offset="100%" stop-color="#FF79DA" />
