@@ -26,7 +26,7 @@ a{
 /*animation loading */ 
 
 
-
+/*
 
 .loading{
     position: fixed; 
@@ -78,7 +78,7 @@ a{
         transform: scale(0);
     }
 }
-
+*/
 /* HEADER */
 
 header{
@@ -236,7 +236,6 @@ nav, .intro{
 }
 
 .like-btn {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,11 +244,9 @@ nav, .intro{
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.5s;
-    opacity: 0;
     z-index: 2;
   }
 .fa-heart {
-    position: absolute;
     transition: all ease-in-out;
     width: 30px; 
     right:10px;
@@ -261,9 +258,8 @@ nav, .intro{
     stroke: black;
 }
 
-.like-btn:checked + .fa-heart path{
+.like-btn:hover > .fa-heart path{
     animation: animate-heart .5s linear forwards; 
-    -webkit-text-stroke: url(#my-cool-gradient);
     transform-origin: center;
   }
 
@@ -275,11 +271,11 @@ nav, .intro{
 
 @keyframes animate-heart{
     0%,25%{
-        opacity: .25;
+       /* opacity: .25;*/
       transform: scale(1);
     }
     30%{
-        opacity: .5;
+       /* opacity: .5;*/
         transform: scale(0.8);
     }
     75%{
@@ -289,7 +285,7 @@ nav, .intro{
     100% {
        fill: url(#my-cool-gradient);
       stroke: url(#my-cool-gradient) ;
-      opacity: 1;
+     /* opacity: 1;*/
       transform: scale(1);
     }
 
@@ -353,14 +349,23 @@ footer{
         position: absolute;
         left:0; right:0; bottom: 0px;
         display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: space-between;
         background-color: $color-background;
         height: 50px;
             p{
                 margin: 0px;
+                margin-left: 25px;
                 width: auto;
+                height: 25px;
                 font-size: 23px;
+            }
+            &_heart{
+                top: 15px;
+                position: absolute;
+                transition: all ease-in-out;
+                width: 30px;
+                right: 15px;
             }
     }
 }
@@ -372,13 +377,14 @@ footer{
     &_uppercase{
         text-transform: uppercase;
         font-weight: lighter;
-        margin-left: 20px;
+        margin-left: 25px;
         width: 100px;
         &:after{
             content: ""; /* This is necessary for the pseudo element to work. */ 
             display: block; /* This will put the pseudo element on its own line. */
             width: 45%; /* Change this to whatever width you want. */
             border-bottom: 2px solid $color-tertiary; /* This creates the border. Replace black with whatever color you want. */
+            margin-top: 4px;
         }
     }
     &_detail{
@@ -488,12 +494,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* MEADI QUERRIES */ 
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
     .liste_fonctionnement, .container_fonctionnement{
         display: flex;
         flex-direction: column;
@@ -516,10 +522,17 @@ footer{
             margin: 0px 10px 20px 10px
         }
     }
+
+    .container{
+        display: flex;
+    }
+    .repas{
+        width: 33%;
+    }
     
 }
 
-@media only screen and (min-device-width : 1025px) /*and (max-device-width : 1440px)*/ {
+@media only screen and (min-width : 1025px){
    body{
         margin: auto;
         width: 70%;
@@ -557,10 +570,27 @@ footer{
         }
    }
 
+   .presentation{
+       
+       &_text{
+        justify-content: space-between;
+           p{
+               margin-left: 26%;
+           }
+           &_heart{
+               left: auto;
+               right: 26%;
+               
+           }
+           &_check{
+               margin-right: 25.5%;
+           }
+       }
+   }
+
     .repas{
         &_uppercase{
-            margin: auto;
-            margin-left: 25%;
+            margin: 10px 0px 0px 26%;
             
         }
         &_container{
