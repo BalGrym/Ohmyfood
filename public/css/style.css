@@ -17,59 +17,47 @@ a {
   color: black; }
 
 /*animation loading */
-/*
+.loading {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  animation: loading-stop 3s step-end both; }
+  .loading_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: loading-spinner 0.5s cubic-bezier(0.2, 0.6, 0.5, 1) 6 alternate;
+    transform-origin: top; }
+    .loading_circle_1 {
+      background-color: #9356DC;
+      animation-delay: 0.1s; }
+    .loading_circle_2 {
+      background-color: #FF79DA;
+      animation-delay: 0.2s; }
+    .loading_circle_3 {
+      background-color: #99E2D0;
+      animation-delay: 0.3s; }
 
-.loading{
-    position: fixed; 
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 7;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    animation: loading-stop 3s step-end both;
-    &_circle{
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        animation: loading-spinner 0.5s cubic-bezier(.20,.60,.5,1) 6 alternate;
-        transform-origin: top;
-        &_1{
-            background-color: $color-primary;
-            animation-delay: 0.1s;
-        }
-        &_2{
-            background-color: $color-secondary;
-            animation-delay: 0.2s;
-        }
-        &_3{
-            background-color: $color-tertiary;
-            animation-delay: 0.3s;
-        }
-    }
-} 
+@keyframes loading-spinner {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-80px); } }
 
-@keyframes loading-spinner{
-    from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(-80px);
-    }
-}
-@keyframes loading-stop{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(0);
-    }
-}
-*/
+@keyframes loading-stop {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0); } }
+
 /* HEADER */
 header {
   display: flex;
