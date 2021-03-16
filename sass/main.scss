@@ -408,6 +408,13 @@ footer{
                     transform: rotate(0turn);
                 }
             }
+            & > .repas_text{
+                width: 80%;
+                transition: 1s;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         } 
 
         & p{
@@ -421,13 +428,6 @@ footer{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        &:hover{
-            width: 80%;
-            transition: 1s;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
         &_name {
             text-overflow: ellipsis;
             white-space: nowrap;

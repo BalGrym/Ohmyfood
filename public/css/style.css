@@ -345,6 +345,12 @@ footer {
       display: flex; }
       .repas_detail:hover > .repas_check > .repas_check_icon {
         transform: rotate(0turn); }
+    .repas_detail:hover > .repas_text {
+      width: 80%;
+      transition: 1s;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
     .repas_detail p {
       margin: 15px 10px 15px 10px;
       align-self: flex-end;
@@ -354,12 +360,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%; }
-    .repas_text:hover {
-      width: 80%;
-      transition: 1s;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden; }
     .repas_text_name {
       text-overflow: ellipsis;
       white-space: nowrap;
