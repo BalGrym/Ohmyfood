@@ -155,8 +155,11 @@ nav, .intro{
     margin: 24px 0px 24px 10px;
     border-radius: 15px 15px;
     box-shadow: 3px 3px 20px $color-shadow, -1px 1px 20px $color-shadow;
-    &_special{
-        background-color: #f5edff;
+    &:hover{
+        background-color: #f5edff ;
+        & > .fonctionnement_icon{
+            color: $color-primary;
+        }
     }
     &_number{
         background: $color-primary;
@@ -172,7 +175,7 @@ nav, .intro{
         right: 10px;
     }
     &_icon_shop{
-        color: $color-primary;
+        color: $color-icon;
         margin: 0px 20px 0px 5px;
     }
     &_icon_list{

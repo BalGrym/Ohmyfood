@@ -121,8 +121,10 @@ nav, .intro {
   margin: 24px 0px 24px 10px;
   border-radius: 15px 15px;
   box-shadow: 3px 3px 20px #d1d1d1, -1px 1px 20px #d1d1d1; }
-  .fonctionnement_special {
+  .fonctionnement:hover {
     background-color: #f5edff; }
+    .fonctionnement:hover > .fonctionnement_icon {
+      color: #9356DC; }
   .fonctionnement_number {
     background: #9356DC;
     color: white;
@@ -136,7 +138,7 @@ nav, .intro {
     position: relative;
     right: 10px; }
   .fonctionnement_icon_shop {
-    color: #9356DC;
+    color: #7e7e7e;
     margin: 0px 20px 0px 5px; }
   .fonctionnement_icon_list {
     color: #7e7e7e;
